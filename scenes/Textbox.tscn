@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://uw2xbsuxk557"]
+
+[ext_resource type="Script" uid="uid://bq4adr35a6mer" path="res://scripts/ui/dialogueplayer.gd" id="1_0xaky"]
+[ext_resource type="Texture2D" uid="uid://bp5dct567i7n7" path="res://assets/spritesheets/Dialogue/dialogue_box.png" id="1_mp183"]
+
+[node name="Textbox" type="CanvasLayer"]
+script = ExtResource("1_0xaky")
+
+[node name="Box" type="NinePatchRect" parent="."]
+offset_left = 27.0
+offset_top = 153.0
+offset_right = 456.0
+offset_bottom = 250.0
+rotation = -0.000577935
+texture = ExtResource("1_mp183")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="Name" type="RichTextLabel" parent="Box"]
+layout_mode = 0
+offset_left = 9.99826
+offset_top = 3.00578
+offset_right = 270.998
+offset_bottom = 43.0058
+text = "Name"
+
+[node name="Dialogue" type="RichTextLabel" parent="Box"]
+layout_mode = 0
+offset_left = 21.9838
+offset_top = 28.0127
+offset_right = 396.984
+offset_bottom = 90.0127
+text = "Hello! How are you?"

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://coct0moeul5f8"]
+
+[sub_resource type="Theme" id="Theme_4h3mk"]
+
+[node name="Menu" type="Control" unique_id=542404]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 504.0
+offset_top = 307.0
+offset_right = -590.0
+offset_bottom = -290.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="Container" parent="." unique_id=702890614]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Container" unique_id=562452375]
+layout_mode = 2
+theme = SubResource("Theme_4h3mk")
+
+[node name="GridContainer" type="GridContainer" parent="Container/AspectRatioContainer" unique_id=581907024]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Container/AspectRatioContainer/GridContainer" unique_id=1784483273]
+layout_mode = 2
+text = "GREAT"
+
+[node name="Label2" type="Label" parent="Container/AspectRatioContainer/GridContainer" unique_id=188854829]
+layout_mode = 2
+text = "SILLLY"
+
+[node name="Button" type="Button" parent="Container/AspectRatioContainer/GridContainer" unique_id=1513519859]
+layout_mode = 2
+text = "Click"

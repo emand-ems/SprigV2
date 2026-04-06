@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lmoqqmlcqhu6"
+path="res://.godot/imported/RoccoW - Why Did the Crow Cross the Road.mp3-96cb1d6b22062d536c02d20537744886.mp3str"
+
+[deps]
+
+source_file="res://assets/music/RoccoW - Why Did the Crow Cross the Road.mp3"
+dest_files=["res://.godot/imported/RoccoW - Why Did the Crow Cross the Road.mp3-96cb1d6b22062d536c02d20537744886.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

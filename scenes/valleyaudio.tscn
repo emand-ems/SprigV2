@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ngkm0shjwfq0"]
+
+[ext_resource type="AudioStream" uid="uid://lmoqqmlcqhu6" path="res://assets/music/RoccoW - Why Did the Crow Cross the Road.mp3" id="1_wpdqq"]
+[ext_resource type="Script" uid="uid://c7pdvkdu4p7mu" path="res://scripts/music/valleyaudio.gd" id="2_vakr0"]
+
+[node name="Valley Audio" type="AudioStreamPlayer"]
+stream = ExtResource("1_wpdqq")
+script = ExtResource("2_vakr0")
