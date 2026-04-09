@@ -1,8 +1,10 @@
-[gd_scene format=3 uid="uid://coct0moeul5f8"]
+[gd_scene load_steps=3 format=3 uid="uid://coct0moeul5f8"]
+
+[sub_resource type="Theme" id="Theme_yqeox"]
 
 [sub_resource type="Theme" id="Theme_4h3mk"]
 
-[node name="Menu" type="Control" unique_id=542404]
+[node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,26 +16,37 @@ offset_bottom = -290.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Container" type="Container" parent="." unique_id=702890614]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -11.0
+offset_top = -74.0
+offset_right = 58.0
+offset_bottom = 97.0
+theme = SubResource("Theme_yqeox")
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Container" unique_id=562452375]
+[node name="Container" type="Container" parent="Panel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 59.0
+offset_bottom = 91.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel/Container"]
 layout_mode = 2
 theme = SubResource("Theme_4h3mk")
 
-[node name="GridContainer" type="GridContainer" parent="Container/AspectRatioContainer" unique_id=581907024]
+[node name="GridContainer" type="GridContainer" parent="Panel/Container/AspectRatioContainer"]
+layout_direction = 2
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Container/AspectRatioContainer/GridContainer" unique_id=1784483273]
+[node name="Label" type="Label" parent="Panel/Container/AspectRatioContainer/GridContainer"]
 layout_mode = 2
-text = "GREAT"
+text = "MENU"
 
-[node name="Label2" type="Label" parent="Container/AspectRatioContainer/GridContainer" unique_id=188854829]
+[node name="Label2" type="Label" parent="Panel/Container/AspectRatioContainer/GridContainer"]
 layout_mode = 2
-text = "SILLLY"
+text = "TIME"
 
-[node name="Button" type="Button" parent="Container/AspectRatioContainer/GridContainer" unique_id=1513519859]
+[node name="Button" type="Button" parent="Panel/Container/AspectRatioContainer/GridContainer"]
 layout_mode = 2
 text = "Click"
