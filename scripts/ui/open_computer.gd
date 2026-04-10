@@ -1,4 +1,5 @@
 extends Area2D
+
 var near_computer = false
 var computer_on = false
 var player

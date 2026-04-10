@@ -1,52 +1,72 @@
-[gd_scene load_steps=3 format=3 uid="uid://coct0moeul5f8"]
+[gd_scene format=3 uid="uid://coct0moeul5f8"]
+
+[ext_resource type="Script" uid="uid://bho7ar0n11reo" path="res://scenes/menu.gd" id="1_yqeox"]
+[ext_resource type="FontFile" uid="uid://b3i6t6snixax" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="2_con2f"]
+[ext_resource type="StyleBox" uid="uid://d07mtvwdqfpsa" path="res://scenes/new_style_box_flat.tres" id="2_vjb58"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjb58"]
+bg_color = Color(0.9231008, 0.7655518, 0.6543497, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_con2f"]
+bg_color = Color(1, 0.27373433, 0.59073883, 1)
 
 [sub_resource type="Theme" id="Theme_yqeox"]
+Button/fonts/font = ExtResource("2_con2f")
+Button/styles/normal = ExtResource("2_vjb58")
+Label/fonts/font = ExtResource("2_con2f")
+Panel/styles/panel = SubResource("StyleBoxFlat_vjb58")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_con2f")
 
-[sub_resource type="Theme" id="Theme_4h3mk"]
-
-[node name="Menu" type="Control"]
+[node name="Menu" type="Control" unique_id=395648561]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 504.0
-offset_top = 307.0
-offset_right = -590.0
-offset_bottom = -290.0
+offset_left = 501.0
+offset_top = 189.0
+offset_right = -585.0
+offset_bottom = -312.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_yqeox")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = -11.0
-offset_top = -74.0
-offset_right = 58.0
-offset_bottom = 97.0
+[node name="Panel" type="Panel" parent="." unique_id=1123704435]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.45000002
+anchor_right = 0.5
+anchor_bottom = 0.45000002
+offset_left = -30.969994
+offset_top = -56.504005
+offset_right = 29.030006
+offset_bottom = 56.495995
+grow_horizontal = 2
+grow_vertical = 2
 theme = SubResource("Theme_yqeox")
 
-[node name="Container" type="Container" parent="Panel"]
+[node name="GridContainer" type="GridContainer" parent="Panel" unique_id=173523664]
+layout_direction = 2
 layout_mode = 0
 offset_left = 7.0
 offset_top = 4.0
-offset_right = 59.0
-offset_bottom = 91.0
+offset_right = 56.0
+offset_bottom = 89.0
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel/Container"]
+[node name="Label" type="Label" parent="Panel/GridContainer" unique_id=2124560854]
 layout_mode = 2
-theme = SubResource("Theme_4h3mk")
+text = "Menu"
 
-[node name="GridContainer" type="GridContainer" parent="Panel/Container/AspectRatioContainer"]
-layout_direction = 2
+[node name="Label2" type="Label" parent="Panel/GridContainer" unique_id=991280772]
+layout_mode = 2
+text = "Time"
+
+[node name="Label3" type="Label" parent="Panel/GridContainer" unique_id=690765739]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/Container/AspectRatioContainer/GridContainer"]
-layout_mode = 2
-text = "MENU"
-
-[node name="Label2" type="Label" parent="Panel/Container/AspectRatioContainer/GridContainer"]
-layout_mode = 2
-text = "TIME"
-
-[node name="Button" type="Button" parent="Panel/Container/AspectRatioContainer/GridContainer"]
+[node name="Button" type="Button" parent="Panel/GridContainer" unique_id=495592820]
 layout_mode = 2
 text = "Click"
